@@ -1,7 +1,10 @@
 package yourspot.com.br.yourspot.ui.activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -12,6 +15,9 @@ public class ProductSelectedActivity extends AppCompatActivity {
     private String productSelected;
     private String imageProduct;
     private ImageView image;
+    private Button addCart;
+    private Button favorite;
+    private Button toView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +28,24 @@ public class ProductSelectedActivity extends AppCompatActivity {
         productSelected = product.getString("productSelected");
         imageProduct = product.getString("imageProduct");
 
-        image = findViewById(R.id.product_selected_img);
-
-        Picasso.with(getApplicationContext()).load(imageProduct).into(image);
-
-
         getSupportActionBar().setTitle(productSelected);
+
+        image = findViewById(R.id.product_selected_img);
+        Picasso.with(getApplicationContext())
+                .load(imageProduct)
+                .into(image);
+
+        addCart = findViewById(R.id.product_selected_btn_add_cart);
+        favorite = findViewById(R.id.product_selected_btn_favorite);
+        toView = findViewById(R.id.product_selected_btn_to_view);
+
+        addCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProductSelectedActivity.this, CartActivity.class));
+            }
+        });
+
+
     }
 }
