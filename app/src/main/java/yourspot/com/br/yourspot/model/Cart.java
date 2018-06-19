@@ -4,10 +4,10 @@ public class Cart {
     private String imgProduct;
     private String product;
     private String color;
-    private String value;
-    private String amount;
+    private double value;
+    private int amount;
 
-    public Cart(String imgProduct, String product, String color, String value, String amount) {
+    public Cart(String imgProduct, String product, String color, double value, int amount) {
         this.imgProduct = imgProduct;
         this.product = product;
         this.color = color;
@@ -39,19 +39,19 @@ public class Cart {
         this.color = color;
     }
 
-    public String getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(double value) {
         this.value = value;
     }
 
-    public String getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 }

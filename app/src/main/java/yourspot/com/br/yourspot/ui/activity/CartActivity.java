@@ -10,6 +10,7 @@ import java.util.List;
 import yourspot.com.br.yourspot.R;
 import yourspot.com.br.yourspot.model.Cart;
 import yourspot.com.br.yourspot.ui.recyclerview.adapter.CartAdapter;
+import yourspot.com.br.yourspot.ui.recyclerview.listener.OnItemClickListenerCart;
 
 public class CartActivity extends AppCompatActivity {
 
@@ -29,33 +30,37 @@ public class CartActivity extends AppCompatActivity {
         adapter = new CartAdapter(this, allProducts);
         rcv.setHasFixedSize(true);
         rcv.setAdapter(adapter);
+        adapter.setOnItemClickListenerCart(new OnItemClickListenerCart() {
+            @Override
+            public void onItemClick(Cart listProducts, int adapterPosition) {
+
+            }
+        });
     }
 
     public List<Cart> getAllproductsOfCart() {
         List<Cart> listProducts = new ArrayList<>();
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
-        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", "R$ 300,00", "1"));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
+        listProducts.add(new Cart("https://i1.zst.com.br/images/smart-tv-tv-led-50-samsung-serie-6-4k-hdr-netflix-un50ku6000-3-hdmi-photo193748072-12-25-3b.jpg", "TV", "Preta", 300.00,1));
 
         return listProducts;
     }

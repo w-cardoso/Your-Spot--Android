@@ -54,6 +54,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         private final TextView color;
         private final TextView value;
         private final TextView amount;
+        private final ImageView plus;
+        private final ImageView minus;
 
 
         public CartViewHolder(View itemView) {
@@ -63,6 +65,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             color = itemView.findViewById(R.id.item_cart_txt_color);
             value = itemView.findViewById(R.id.item_cart_txt_value);
             amount = itemView.findViewById(R.id.item_cart_txt_qtd);
+            plus = itemView.findViewById(R.id.item_cart_img_plus);
+            minus = itemView.findViewById(R.id.item_cart_img_minus);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -76,7 +80,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             fieldFill(listProducts);
         }
 
-        private void fieldFill(Cart listProducts) {
+        private void fieldFill(final Cart listProducts) {
             Picasso.with(context)
                     .load(listProducts.getImgProduct())
                     .resize(600, 380)
@@ -85,8 +89,22 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
             product.setText(listProducts.getProduct());
             color.setText(listProducts.getColor());
-            value.setText(listProducts.getValue());
-            amount.setText(listProducts.getAmount());
+            value.setText(String.valueOf(listProducts.getValue()));
+            amount.setText(String.valueOf(listProducts.getAmount()));
+
+            plus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
+            minus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    
+                }
+            });
         }
     }
 }
