@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="yourspot.com.br.yourspot">
 
-
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -16,7 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".ui.activity.CategorysActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +23,8 @@
         </activity>
         <activity android:name=".ui.activity.ProductsLitsActivity" />
         <activity android:name=".ui.activity.ProductSelectedActivity" />
-        <activity android:name=".ui.activity.CartActivity"></activity>
+        <activity android:name=".ui.activity.CartActivity" />
+        <activity android:name=".ui.activity.PaymentActivity"></activity>
     </application>
 
 </manifest>
