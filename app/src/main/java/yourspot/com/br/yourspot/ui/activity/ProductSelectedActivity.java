@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 import yourspot.com.br.yourspot.R;
+import yourspot.com.br.yourspot.helloar.HelloArActivity;
 
 public class ProductSelectedActivity extends AppCompatActivity {
     private String productSelected;
@@ -43,6 +44,13 @@ public class ProductSelectedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ProductSelectedActivity.this, CartActivity.class));
+            }
+        });
+
+        toView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProductSelectedActivity.this, HelloArActivity.class));
             }
         });
 
